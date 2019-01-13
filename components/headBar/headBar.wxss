@@ -1,0 +1,13 @@
+.cover{
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  font-family: AdobeHeitiStd-Regular;
+	font-size: 25px;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999999;
+  width: 100%;
+}

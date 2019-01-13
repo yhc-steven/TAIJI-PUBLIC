@@ -1,0 +1,43 @@
+<!-- logs.wxml -->
+<head-bar></head-bar>
+<view style="position:fixed;left:1000%;top:0;overflow:auto;z-index:3;width:750rpx;height:1334rpx;">
+  <canvas canvas-id="shareImg" style="width: 750px; height: 1334px;border:1px solid red;"></canvas>
+  <canvas canvas-id="taiji" style="width: 1400px; height: 1400px;"></canvas>
+</view>
+
+<view class="cont">
+  <view class="contF">
+    <view class="userInfo">
+      <image class="picName" src="{{userInfo.avatarUrl}}"></image>
+      <view class="name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="pf" wx:if="{{ifClickMeng}}" bind:tap="clickMeng">
+      <view class="sendWord">{{advice}}</view>
+      <view class="grade">
+        <view class="score">{{fen}}</view>
+        <view class="compre">综合评分</view>
+      </view>
+    </view>
+    <view  class="pf" wx:else><rich-text nodes="{{nodes}}"></rich-text></view>
+    <view class="usermotto">
+      <image src='{{imgUrl}}' style='width:600rpx;height:600rpx;' class="imgRot"></image>
+    </view>
+    <view class="testimonials">
+      <view class="testimCont">
+        感言
+        <view class="testimWord">{{ganyan}}</view>
+      </view>
+      <view class="mood">
+        心情
+        <image src="https://xcx.sj-ys.cn/pic/mood/mood{{zdKey}}.png" class="mood-icon"/>
+      </view>
+    </view>
+    <view class="gzCont">
+      <view class="gzDescribe">扫一扫 添加公众号 关注睡觉 好好睡觉</view>
+      <image src="https://xcx.sj-ys.cn/pic/ewm/sjewm.png" class="gzh" />
+    </view>
+    <view class="shareCont">
+      <button class="shareBtn" bindtap="saveImageToPhotosAlbum">分享</button>
+    </view>
+  </view>
+</view>

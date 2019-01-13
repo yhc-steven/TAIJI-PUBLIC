@@ -1,0 +1,50 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxccd1ab61020acd9e",
+	"projectname": "taijitu",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/logs/logs",
+					"pathName": "pages/logs/logs",
+					"query": "scTime=18:01&qcTime=08:06&sleepTime=20:01&getUpTime=06:00&dreamType=1&sleepDeepType=1&expression=1&fen=40&advice=dsdfd...&adviceall=advice阿拉蕾迪斯拉夫大街上的浪费大家撒"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<head-bar></head-bar>
+<view class="cont">
+  <view class="name">
+    <image class="bac" src="/img/bacLine.png"></image>
+    <view class="ball" bindtap="makeChoose">
+      <image src="/img/ball.png"></image>
+    </view>
+    <view class="nameList nameList{{index}}" wx:for="{{nameList}}" wx:key="{{index}}" bindtap="makeChoose">
+      <view class="cover">
+        <view style="animation-delay:{{index*2}}s"></view>
+      </view>
+      <view >{{item}}</view>
+    </view>
+    <view class="text">
+      <view bindtap="makeChoose" class="choose">
+        我来测一测
+      </view>
+      <view>北京眠康科技有限责任公司</view>
+      <text>Beijing Miankang Technology Co.,Ltd.</text>
+    </view>
+  </view>
+  <view class="formCover" wx:if="{{formCoverShow}}" bindtap="closeCover">
+    <view class="form" catchtap="stopClose">
+      <view class="start">
+          <picker class="list" data-id="0" mode="date" value="{{time}}" start="2018-01-01" end="2028-01-01" bindchange="bindTimeChange">
+              <view class="picker">
+                上床时间 ：<text class="{{subValue[0] ? 'active' : ''}}">{{subValue[0] ? subValue[0] : '请选择日期 '}}</text>
+              </view>
+          </picker>
+          <picker class="list listTime" data-id="1" mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+            <view class="picker">
+              <text class="{{subValue[1] ? 'active' : ''}}">{{subValue[1] ? subValue[1] : '选择时间'}}</text>
+            </view>
+          </picker>
+          <picker class="list" data-id="2" mode="date" value="{{time}}" start="2018-01-01" end="2028-01-01" bindchange="bindTimeChange">
+              <view class="picker">
+                入睡时间 ：<text class="{{subValue[2] ? 'active' : ''}}">{{subValue[2] ? subValue[2] : '请选择日期 '}}</text>
+              </view>
+          </picker>
+          <picker class="list listTime1" data-id="3" mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+              <view class="picker">
+                <text class="{{subValue[3] ? 'active' : ''}}">{{subValue[3] ? subValue[3] : '选择时间'}}</text>
+              </view>
+          </picker>
+          <picker class="list" data-id="4" mode="date" value="{{time}}" start="2018-01-01" end="2028-01-01" bindchange="bindTimeChange">
+              <view class="picker">
+                醒来时间 ：<text class="{{subValue[4] ? 'active' : ''}}">{{subValue[4] ? subValue[4] : '请选择日期 '}}</text>
+              </view>
+          </picker>
+          <picker class="list listTime2" data-id="5" mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+              <view class="picker">
+                <text class="{{subValue[5] ? 'active' : ''}}">{{subValue[5] ? subValue[5] : '选择时间'}}</text>
+              </view>
+          </picker>
+          <picker class="list" data-id="6" mode="date" value="{{time}}" start="2018-01-01" end="2028-01-01" bindchange="bindTimeChange">
+              <view class="picker">
+                起床时间 ：<text class="{{subValue[6] ? 'active' : ''}}">{{subValue[6] ? subValue[6] : '请选择日期 '}}</text>
+              </view>
+          </picker>
+          <picker class="list listTime3" data-id="7" mode="time" value="{{time}}" start="00:01" end="23:59" bindchange="bindTimeChange">
+              <view class="picker">
+                <text class="{{subValue[7] ? 'active' : ''}}">{{subValue[7] ? subValue[7] : '选择时间'}}</text>
+              </view>
+          </picker>
+          <picker class="list" data-id="8" mode="selector" value="{{index}}" bindchange="bindTimeChange" range="{{dreamArray}}" range-key="zdValue">
+              <view class="picker">
+                梦境类型 ：<text class="{{subValue[8] ? 'active' : ''}}">{{subValue[8] ? dreamArray[subValue[8]].zdValue : '请选择梦境类型'}}</text>
+              </view> 
+          </picker>
+          <picker class="list" data-id="9" mode="selector" data-type="1234" value="{{index}}" bindchange="bindTimeChange" range="{{deepArray}}" range-key="zdValue">
+              <view class="picker">
+                睡眠深浅类型 ：<text class="{{subValue[9] ? 'active' : ''}}">{{subValue[9] ? deepArray[subValue[9]].zdValue : '请选择睡眠深浅'}}</text>
+              </view> 
+          </picker>
+          <picker class="list" data-id="10" mode="selector" data-type="1234" value="{{index}}" bindchange="bindTimeChange" range="{{modeArray}}" range-key="zdValue">
+              <view class="picker">
+                睡眠表情 ：<text class="{{subValue[10] ? 'active' : ''}}">{{subValue[10] ? modeArray[subValue[10]].zdValue : '请选择睡眠表情'}}</text>
+              </view> 
+          </picker>
+          <view style="border:none" class="list list1"><div>睡眠感言 ：</div><input data-id="11" placeholder-style="color:#ccc" value="{{subValue[11] ? subValue[11] : ''}}" maxlength="15" bindinput="bindTimeChange" placeholder="请输入睡眠感言" /></view>
+          <button open-type="getUserInfo" class="submit" bindgetuserinfo="getuserInfo">
+            提交
+          </button>
+        </view>
+    </view>
+  </view>  
+</view>

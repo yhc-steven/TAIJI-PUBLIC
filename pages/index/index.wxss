@@ -1,0 +1,228 @@
+page{
+  height: 100%;
+  width: 100%;
+  background: #ccc
+}
+.cont{
+  height: 100%;
+  width: 100%;
+  background: url(//wx3.sinaimg.cn/orj360/a93aa634ly1fva09fabx9j20v91vo4qq.jpg) no-repeat top left;
+  background-size:100% auto ;
+  overflow: hidden;
+}
+.name{
+  height: 1334rpx;
+  width: 100%;
+  position: relative
+}
+.name .bac{
+  height: 100%;
+  width: 100%;
+}
+.name .ball{
+  height: 450rpx;
+  width: 450rpx;
+  position: absolute;
+  top: 190rpx;
+  left: 50%;
+  margin-left:-225rpx; 
+  overflow: hidden;
+  border-radius:450rpx ;
+  animation: ballRoate 2s linear both;
+}
+@keyframes ballRoate{
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
+}
+.name .ball image{
+  height: 481rpx;
+  width: 462rpx;
+  margin-top: -18rpx
+}
+.name .nameList{
+  position: absolute;
+  color: #fff;
+  left: 100rpx;
+  top: 100rpx;
+  height: 100rpx;
+  width: 200rpx;
+  text-align: center;
+  font-size: 13px;
+}
+.name .nameList0{
+  left: 475rpx;
+  top: 600rpx
+}
+.name .nameList1{
+  left: 40rpx;
+  top: 620rpx
+}
+.name .nameList2{
+  left: 560rpx;
+  top: 500rpx
+}
+.name .nameList3{
+  left: 500rpx;
+  top: 800rpx
+}
+.name .nameList4{
+  left: 200rpx;
+  top: 870rpx
+}
+.name .nameList5{
+  left: 530rpx;
+  top: 950rpx
+}
+.name .nameList .cover{
+  height: 60rpx;
+  width: 60rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction:column;
+  justify-content:center
+}
+.name .nameList .cover view{
+  height: 20rpx;
+  width: 20rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius:150rpx; 
+  box-shadow: 0 0 10rpx 10rpx rgba(255,255,255,0.5);
+  animation: shine0 15s linear infinite;
+}
+@keyframes shine0{
+  0%{width:20rpx;height: 20rpx;}
+  8%{width:40rpx;height: 40rpx; }
+  16%{width:20rpx;height: 20rpx; }
+  100%{width:20rpx;height: 20rpx; }
+}
+.name .text{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.name .text view{
+  font-family: SimHei;
+	font-size: 21px;
+	line-height: 88rpx;
+	letter-spacing: 13rpx;
+  color: #ffffff;
+  text-align: center
+} 
+.name .text text{
+  font-family: SimHei;
+	font-size: 12px;
+	height: 88rpx;
+	letter-spacing: 2rpx;
+  color: #ffffff;
+  text-align: center;
+  display: block
+}
+.name .text .choose{
+  height: 80rpx;
+  width: 400rpx;
+  background: pink;
+  margin: 0 auto;
+  border-radius:80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color:#000;
+  margin-bottom:20rpx ;
+  position: relative;
+  /* animation: choose 4s ease-in-out infinite; */
+}
+@keyframes choose{
+  0%{left: -80rpx;}
+  50%{left: 80rpx;}
+  100%{left: -80rpx;}
+}
+.formCover{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+.form{
+  width: 80%;
+  margin: 250rpx auto 0;
+  border-radius:50rpx; 
+  background: rgba(255,255,255,0.95);
+  padding: 30rpx;
+  animation: formchange 1s ease;
+  overflow: hidden;
+  position: relative;
+}
+@keyframes formchange{
+  0%{width: 0;opacity: 0;}
+  100%{width: 80%;opacity: 1;}
+}
+.form .list{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  border-bottom:1rpx solid #ccc;
+}
+.form .list1{
+  display: flex
+}
+.form .listTime{
+  position: absolute;
+  top: 30rpx;
+  right: 0;
+  width: 30%;
+  height: 100%;
+}
+.form .listTime1{
+  position: absolute;
+  top: 120rpx;
+  right: 0;
+  width: 30%;
+  height: 100%;
+}
+.form .listTime2{
+  position: absolute;
+  top: 210rpx;
+  right: 0;
+  width: 30%;
+  height: 100%;
+}
+.form .listTime3{
+  position: absolute;
+  top: 300rpx;
+  right: 0;
+  width: 30%;
+  height: 100%;
+}
+
+.form .list1 div{
+  flex-shrink:0
+}
+
+.form .list .picker{
+  width: 100%
+}
+.form .list .picker text{
+  color: #ccc;
+  width: 100%
+}
+.form .list .picker text.active{
+  color: #333
+}
+.form .list input{
+  height: 90rpx;
+}
+.form .submit{
+  height: 80rpx;
+  width: 400rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius:50rpx;
+  margin: 30rpx auto; 
+  background: blue;
+  opacity: 0.5;
+  color: #fff
+}

@@ -1,0 +1,5 @@
+
+<view class="cover" style="padding-top:{{stylePadding}}px">
+  <view class="img"></view>
+  <view class="text">睡眠日记</view>
+</view>
